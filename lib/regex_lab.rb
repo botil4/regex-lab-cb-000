@@ -18,4 +18,13 @@ def valid_phone_number?(phone)
   case phone
   when /\d{10}/
     true
+  when /\d{3} \d{3} \d{4}/
+    true
+  when /\(\d{3}\)\d{7}/
+    true
+  when /\(\d{3}\)\d{3}-\d{4}/
+    true
+  else
+    false
+  end
 end
